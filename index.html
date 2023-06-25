@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Manager</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/pages.css">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -14,22 +22,20 @@
         <!-- Página de login -->
         <div id="login-page">
 
-            <h3>Acesse sua Área Administrativa</h3>
+            <p>Acesse sua <br>Área Administrativa</p>
 
-            <img src="./assets/img/login-icon.png" alt="">
+            <div id="login-img"></div>
 
             <form id="login-form">
-                <div class="form-group">
-                    <input type="text" name="username" id="username" placeholder="Seu Usuário">
-                    <input type="text" name="password" id="password" placeholder="Sua Senha">
-                    <button type="submit">Fazer Login</button>
-                </div>
+                <input type="email" name="username" class="login-input" id="username" placeholder="Seu Usuário" required>
+                <input type="password" name="password" id="password" class="login-input" placeholder="Sua Senha" required>
+                <button id="login-button" type="submit">Fazer Login</button>
             </form>
 
         </div>
 
         <!-- Página de cliente -->
-        <div class="clients-page">
+        <div id="clients-page">
 
             <div id="search-bar">
                 <input type="text" id="search-input" placeholder="Buscar Clientes">
@@ -61,7 +67,7 @@
         </div>
 
         <!-- Página de cadastro de clientes -->
-        <div class="add-client-page">
+        <div id="add-client-page">
 
             <div id="add-client-header">
                 <button id="back-button">Voltar</button>
@@ -83,7 +89,7 @@
         </div>
 
         <!-- Página de edição do cliente -->
-        <div class="edit-client-page">
+        <div id="edit-client-page">
             <div id="edit-client-header">
                 <button id="back-button">Voltar</button>
                 <h3>Editar Cliente</h3>
