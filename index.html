@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Manager</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- Página de login -->
+        <div id="login-page">
+
+            <h3>Acesse sua Área Administrativa</h3>
+
+            <img src="./assets/img/login-icon.png" alt="">
+
+            <form id="login-form">
+                <div class="form-group">
+                    <input type="text" name="username" id="username" placeholder="Seu Usuário">
+                    <input type="text" name="password" id="password" placeholder="Sua Senha">
+                    <button type="submit">Fazer Login</button>
+                </div>
+            </form>
+
+        </div>
+
+        <!-- Página de cliente -->
+        <div class="clients-page">
+
+            <div id="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar Clientes">
+                <button id="search-button">Pesquisar</button>
+            </div>
+
+            <div id="client-list-page">
+                <!-- Exemplo de cliente -->
+                <div class="client-item">
+                    <div class="client-data">
+                        <p class="client-name">Nome: Cristian Carvalho</p>
+                        <p class="client-city">Cidade: Sapucaia do Sul, RS</p>
+                        <p class="client-cpf">CPF: 736.296.960-07</p>
+                        <p class="client-created-at">Criado em: 28/05/2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="add-client-button">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="plus-solid 1">
+                        <path id="Vector"
+                            d="M18.2857 5C18.2857 3.89375 17.2643 3 16 3C14.7357 3 13.7143 3.89375 13.7143 5V14H3.4286C2.16431 14 1.14288 14.8938 1.14288 16C1.14288 17.1062 2.16431 18 3.4286 18H13.7143V27C13.7143 28.1063 14.7357 29 16 29C17.2643 29 18.2857 28.1063 18.2857 27V18H28.5715C29.8357 18 30.8572 17.1062 30.8572 16C30.8572 14.8938 29.8357 14 28.5715 14H18.2857V5Z"
+                            fill="white" />
+                    </g>
+                </svg>
+            </button>
+
+        </div>
+
+        <!-- Página de cadastro de clientes -->
+        <div class="add-client-page">
+
+            <div id="add-client-header">
+                <button id="back-button">Voltar</button>
+                <h3>Cadastro Cliente</h3>
+            </div>
+
+            <div id="form-add-client">
+                <form id="add-client">
+                    <input type="text" name="name" id="name" placeholder="Nome">
+                    <input type="text" name="state" id="state" placeholder="Estado">
+                    <input type="text" name="state" id="state" placeholder="Estado">
+                    <input type="text" name="city" id="city" placeholder="Cidade">
+                    <input type="text" name="address" id="address" placeholder="Endereço">
+                    <input type="text" name="whatsapp" id="whatsapp" placeholder="Whatsapp">
+                    <input type="text" name="cpf" id="cpf" placeholder="CPF">
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Página de edição do cliente -->
+        <div class="edit-client-page">
+            <div id="edit-client-header">
+                <button id="back-button">Voltar</button>
+                <h3>Editar Cliente</h3>
+            </div>
+
+            <div id="form-edit-client">
+                <form id="edit-client">
+                    <input type="text" name="name" id="name" placeholder="Nome">
+                    <input type="text" name="state" id="state" placeholder="Estado">
+                    <input type="text" name="state" id="state" placeholder="Estado">
+                    <input type="text" name="city" id="city" placeholder="Cidade">
+                    <input type="text" name="address" id="address" placeholder="Endereço">
+                    <input type="text" name="whatsapp" id="whatsapp" placeholder="Whatsapp">
+                    <input type="text" name="cpf" id="cpf" placeholder="CPF">
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
