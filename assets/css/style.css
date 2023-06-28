@@ -3,9 +3,19 @@
     background: #F1F1F1;
 }
 
+#app {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap-reverse; */
+    justify-self: center;
+    align-items: center;
+    padding: 0 auto;
+}
+
 /* Login page */
 
 #login-page {
+    width: 85%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap-reverse;
@@ -32,26 +42,33 @@
 }
 
 #login-form {
+    width: 366px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-self: center;
     align-items: center;
-    padding: 16px ;
+    padding: 16px;
 }
 
 .login-input {
-    width: 335px;
+    width: 340px;
     height: 62px;
     flex-shrink: 0;
-    border-radius: 15px;
+    margin-top: 16px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+
+}
+
+.styled-input {
     border: #F1F1F1;
     background: #FFF;
-    box-shadow: 0px 13px 15px 0px rgba(207, 207, 207, 0.25);
-    margin-top: 16px;
+    box-shadow: 9px 7px 15px -10px #878;
+    border-radius: 15px;
 }
 
-.login-input:focus {
+.styled:focus {
     padding-left: 10px;
     color: #303030;
     font-size: 16px;
@@ -59,15 +76,15 @@
     padding-left: 25px;
 }
 
-.login-input:not(:focus){
-    padding-left: 10px;
+.styled-input:not(:focus) {
+    /* padding-left: 10px; */
     color: #303030;
     font-size: 16px;
     font-family: Quicksand;
     padding-left: 25px;
 }
 
-.login-input::placeholder {
+.styled-input::placeholder {
     color: #303030;
     font-size: 16px;
     font-family: Quicksand;
@@ -75,42 +92,276 @@
 }
 
 #login-button {
-    width: 335px;
-    height: 59px;
+    width: 100%;
+    height: 62px;
     flex-shrink: 0;
     border-radius: 15px;
     background: #FD6B68;
-    box-shadow: 0px 15px 18px 0px rgba(253, 107, 104, 0.25);
+    box-shadow: 0px 5px 8px 0px #fd6a6886;
     border: #F1F1F1;
     margin-top: 30px;
-
+    /* fonte */
     color: #FFF;
     font-size: 20px;
     font-family: Quicksand;
     font-weight: 700;
 }
 
+/* Responsividade login */
+@media (max-width: 475px) {
+
+    /* Estilos para tela menor que 475px */
+    #login-form {
+        width: 80%;
+    }
+
+    #login-button {
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .login-input {
+        height: 48px;
+        width: 90%;
+    }
+
+    .login-input::placeholder {
+        font-size: 14px;
+    }
+}
+
 
 /* Página de clientes */
 #clients-page {
+    width: 100%;
     display: none;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    justify-self: center;
+    align-items: center;
+    padding: 0 auto;
+    /* overflow: auto; */
 }
 
-#add-client-page {
-    display: none;
+#search-area {
+    width: 100%;
+    padding: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
 
-#edit-client-page {
-    display: none;
+#search-bar {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px 15px 10px 20px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap-reverse; */
+    justify-self: center;
+    align-items: center;
+    /* border: 1px solid red; */
 }
 
+#search-input {
+    flex: 1;
+    height: 51px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    box-shadow: 9px 7px 15px -10px #878;
+}
 
+#search-button {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border: #F1F1F1;
+    background-color: #FFF;
+    box-shadow: 9px 7px 15px -10px #878;}
 
+.client-itens {
+    width: 100%;
+    padding: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    
+}
 
+.client-data {
+    background-color: #fff;
+    box-shadow: 0px 13px 15px 0px rgba(207, 207, 207, 0.25);
+    border-radius: 15px;
+    font-family: Quicksand;
+    padding: 10px 15px 10px 20px;
+    margin: 10px auto;
+    box-shadow: 9px 7px 15px -10px #878;
+    /* border: 1px solid red; */
+
+    width: 73%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: start;
+}
+
+.client-name {
+    background-color: #ffffff00;
+}
+
+.client-city {
+    background-color: #ffffff00;
+}
+
+.client-cpf {
+    background-color: #ffffff00;
+}
+
+.client-created-at {
+    background-color: #ffffff00;
+}
 
 
 #add-client-button {
+    position: fixed;
+    bottom: 30px;
+    right: 20%;
+
+    height: 59px;
+    width: 59px;
+
     background-color: #FD6B68;
     border-radius: 70px;
     border: 1px solid #FD6B68;
+    box-shadow: 0px 5px 8px 0px #fd6a6886;
+}
+
+/* Página de clientes */
+#add-client-page {
+    width: 90%;
+    display: none;
+    flex-direction: column;
+    /* flex-wrap: wrap-reverse; */
+    justify-self: center;
+    align-items: center;
+    /* padding: 10px; */
+}
+
+#add-client-header {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    /* border: 1px solid red; */
+
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-left: 40px; */
+}
+
+#back-button {
+    width: 43px;
+    height: 43px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: none;
+    box-shadow: 9px 7px 15px -10px #878;
+    margin-right: 40px;
+}
+
+#add-client-header h3 {
+    font-family: Quicksand;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    /* margin: 0 10px 0 50px; */
+}
+
+#add-client {
+    /* border: 1px solid red; */
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#form-add-client {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-self: stretch;
+
+    padding: 10px 10px;
+    /* border: 1px solid red; */
+}
+
+#form-add-client input {
+    height: 51px;
+
+    margin: 10px 5px;
+
+    font-family: Quicksand;
+    border-radius: 15px;
+    border: #F1F1F1;
+    color: black;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 9px 7px 15px -10px #878    
+}
+
+#form-add-client input::placeholder {
+    padding-left: 15px;
+}
+
+#form-add-client input:focus {
+    padding-left: 15px;
+    border: 2px solid yellow;
+}
+
+#form-add-client input:not(:focus) {
+    padding-left: 15px;
+}
+
+#form-add-client button {
+    height: 62px;
+    margin: 10px 5px;
+    margin-top: 35px;
+    border-radius: 15px;
+    background: #FD6B68;
+    box-shadow: 0px 13px 15px 0px #fd6a6886;
+    border: #F1F1F1;
+    /* fonte */
+    color: #FFF;
+    font-size: 20px;
+    font-family: Quicksand;
+    font-weight: 700;
+}
+
+/* Painel de botões */
+#button-panel {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    /* Posiciona o painel na parte inferior */
+    left: 20px;
+    /* Posiciona o painel na parte direita */
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    /* Garante que o painel fique acima de outros elementos */
 }
