@@ -26,8 +26,8 @@
             <div id="login-img"></div>
 
             <form id="login-form">
-                <input type="email" name="username" class="login-input styled-input" id="username"
-                    placeholder="Seu Usuário" required>
+                <input type="text" name="user" class="login-input styled-input" id="user"
+                    placeholder="Seu e-mail de login" required>
                 <input type="password" name="password" id="password" class="styled-input login-input"
                     placeholder="Sua Senha" required>
                 <button id="login-button" type="submit">Fazer Login</button>
@@ -41,7 +41,7 @@
             <div id="search-area">
 
                 <div id="search-bar">
-                    <input type="text" id="search-input" class="styled-input" placeholder="Buscar Clientes">
+                    <input type="search" id="search-input" class="styled-input" placeholder="Buscar Clientes">
                     <button id="search-button">
                         <img src="./assets/img/glass.png">
                     </button>
@@ -49,11 +49,13 @@
             </div>
 
             <!-- Exemplo de cliente -->
-            <div class="client-itens">
-                <div class="client-data">
+            <div id="client-itens" class="client-itens">
+                <!-- <div class="client-data">
                     <p class="client-name">Nome: Cristian Carvalho</p>
-                    <p class="client-city">Cidade: Sapucaia do Sul, RS</p>
+                    <p class="client-email">E-mail: joao.silva@example.com</p>
                     <p class="client-cpf">CPF: 736.296.960-07</p>
+                    <p class="client-wpp">WhatsApp: +55 11 98765-4321</p>
+                    <p class="client-city">Cidade: Sapucaia do Sul, RS</p>
                     <p class="client-created-at">Criado em: 28/05/2023</p>
                 </div>
                 <div class="client-data">
@@ -61,7 +63,7 @@
                     <p class="client-city">Cidade: Sapucaia do Sul, RS</p>
                     <p class="client-cpf">CPF: 736.296.960-07</p>
                     <p class="client-created-at">Criado em: 28/05/2023</p>
-                </div>
+                </div> -->
             </div>
 
 
@@ -81,7 +83,7 @@
         <!-- Página de cadastro de clientes -->
         <div id="add-client-page">
             <div id="add-client-header">
-                <button id="back-button">
+                <button id="back-button" onclick="mostrarPagina('clientes')">
                     <img src="./assets/img/chevron-left-solid 1.png">
                 </button>
                 <h3>Cadastro Cliente</h3>
@@ -90,6 +92,7 @@
             <div id="add-client">
                 <form id="form-add-client">
                     <input type="text" required name="name" id="name" placeholder="Nome">
+                    <input type="text" required name="email" id="email" oninput="validaEmail(this)" placeholder="E-mail">
                     <input type="text" required name="cep" id="cep" oninput="autopreencherEndereco(this)" placeholder="CEP" maxlength="9">
                     <input type="text" required name="city" id="city" placeholder="Cidade">
                     <input type="text" required name="address" id="address" placeholder="Endereço">
@@ -113,7 +116,10 @@
 
     </div>
     <script type="text/javascript" src="assets/js/form-validation.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/functions.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/login.js"></script>
+    <script type="text/javascript" src="assets/js/client-list.js"></script>
 </body>
 
 </html>
