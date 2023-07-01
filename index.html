@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -92,13 +94,17 @@
             <div id="add-client">
                 <form id="form-add-client">
                     <input type="text" required name="name" id="name" placeholder="Nome">
-                    <input type="text" required name="email" id="email" oninput="validaEmail(this)" placeholder="E-mail">
-                    <input type="text" required name="cep" id="cep" oninput="autopreencherEndereco(this)" placeholder="CEP" maxlength="9">
+                    <input type="text" required name="email" id="email" oninput="validaEmail(this)"
+                        placeholder="E-mail">
+                    <input type="text" required name="cep" id="cep" oninput="autopreencherEndereco(this)"
+                        placeholder="CEP" maxlength="9">
                     <input type="text" required name="city" id="city" placeholder="Cidade">
                     <input type="text" required name="address" id="address" placeholder="Endereço">
                     <input type="text" required name="number" id="number" placeholder="Número">
-                    <input type="text" oninput="formatarTelefone(this)" required name="whatsapp" id="whatsapp" placeholder="Whatsapp" maxlength="15">
-                    <input type="text" required name="cpf" id="cpf" maxlength="11" oninput="formatarCPF(this)" placeholder="CPF">
+                    <input type="text" oninput="formatarTelefone(this)" required name="whatsapp" id="whatsapp"
+                        placeholder="Whatsapp" maxlength="15">
+                    <input type="text" required name="cpf" id="cpf" maxlength="11" oninput="formatarCPF(this)"
+                        placeholder="CPF">
                     <button type="submit">Salvar</button>
                 </form>
             </div>

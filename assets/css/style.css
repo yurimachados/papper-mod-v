@@ -210,6 +210,54 @@
     align-items: start;
 }
 
+.options-div{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.data-div{
+    background-color: white;
+}
+
+.delete-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(252, 252, 252);
+    font-family: Quicksand;
+    font-weight: 700;    
+
+    height: 30px;
+    width: 30px;
+    background-color: #FD6B68;
+    border-radius: 70px;
+    border: 1px solid #FD6B68;
+    box-shadow: 0px 5px 8px 0px #fd6a6886;
+}
+
+.edit-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+
+    height: 30px;
+    width: 30px;
+    background-color: #FD6B68;
+    border-radius: 70px;
+    border: 1px solid #FD6B68;
+    box-shadow: 0px 5px 8px 0px #fd6a6886;
+}
+
+.edit-button i {
+    color: white;
+    background-color: #FD6B68;
+}
+
 .client-name {
     background-color: #ffffff00;
 }
