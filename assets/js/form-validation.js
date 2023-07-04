@@ -1,11 +1,11 @@
-const nome = document.getElementById('nome');
-const emailInput = document.getElementById('email');
-const cep = document.getElementById('cep');
-const estado = document.getElementById('state');
-const cidade = document.getElementById('city');
-const endereco = document.getElementById('address');
-const wpp = document.getElementById('whatsapp');
-const cpf = document.getElementById('cpf');
+const nome = document.getElementById('edit_nome');
+const emailInput = document.getElementById('edit_email');
+const cep = document.getElementById('edit_cep');
+const estado = document.getElementById('edit_state');
+const cidade = document.getElementById('edit_city');
+const endereco = document.getElementById('edit_address');
+const wpp = document.getElementById('edit_whatsapp');
+const cpf = document.getElementById('edit_cpf');
 
 
 //Formatações de campos
@@ -19,7 +19,7 @@ function formatarTelefone(wppInput) {
 
     let telefoneFormatado = `+55 ${codigoArea} ${primeiraParte}-${segundaParte}`
 
-    if (telefoneFormatado.length === 16) {
+    if (telefoneFormatado.length === 18) {
         wppInput.value = telefoneFormatado
     }
 }
@@ -61,6 +61,6 @@ function validaEmail(email) {
 }
 
 
-email.addEventListener("focusout", (e) => {
+emailInput.addEventListener("focusout", (e) => {
     validaEmail(emailInput)
 })

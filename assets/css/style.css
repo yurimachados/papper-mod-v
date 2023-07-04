@@ -180,7 +180,8 @@
     border-radius: 50px;
     border: #F1F1F1;
     background-color: #FFF;
-    box-shadow: 9px 7px 15px -10px #878;}
+    box-shadow: 9px 7px 15px -10px #878;
+}
 
 .client-itens {
     width: 100%;
@@ -190,7 +191,7 @@
     justify-items: center;
     align-items: center;
     /* border: 1px solid red; */
-    
+
 }
 
 .client-data {
@@ -210,25 +211,25 @@
     align-items: start;
 }
 
-.options-div{
+.options-div {
     display: flex;
     flex-direction: row-reverse;
     background-color: rgb(255, 255, 255);
     width: 100%;
 }
 
-.data-div{
+.data-div {
     background-color: white;
 }
 
-.delete-button{
+.delete-button {
     display: flex;
     justify-content: center;
     align-items: center;
 
     color: rgb(252, 252, 252);
     font-family: Quicksand;
-    font-weight: 700;    
+    font-weight: 700;
 
     height: 30px;
     width: 30px;
@@ -238,7 +239,7 @@
     box-shadow: 0px 5px 8px 0px #fd6a6886;
 }
 
-.edit-button{
+.edit-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -265,9 +266,11 @@
 .client-city {
     background-color: #ffffff00;
 }
+
 .client-email {
     background-color: #ffffff00;
 }
+
 .client-wpp {
     background-color: #ffffff00;
 }
@@ -372,7 +375,7 @@
     color: black;
     border-radius: 15px;
     background: #FFF;
-    box-shadow: 9px 7px 15px -10px #878    
+    box-shadow: 9px 7px 15px -10px #878
 }
 
 #form-add-client input::placeholder {
@@ -389,6 +392,102 @@
 }
 
 #form-add-client button {
+    height: 62px;
+    margin: 10px 5px;
+    margin-top: 35px;
+    border-radius: 15px;
+    background: #FD6B68;
+    box-shadow: 0px 13px 15px 0px #fd6a6886;
+    border: #F1F1F1;
+    /* fonte */
+    color: #FFF;
+    font-size: 20px;
+    font-family: Quicksand;
+    font-weight: 700;
+}
+
+/* Edit Cliente */
+
+#edit-client-page {
+    width: 90%;
+    display: none;
+    flex-direction: column;
+    /* flex-wrap: wrap-reverse; */
+    justify-self: center;
+    align-items: center;
+    /* padding: 10px; */
+}
+
+#edit-client-header {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    /* border: 1px solid red; */
+
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-left: 40px; */
+}
+
+#edit-client-header h3 {
+    font-family: Quicksand;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    /* margin: 0 10px 0 50px; */
+}
+
+#edit-client {
+    /* border: 1px solid red; */
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#form-edit-client {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-self: stretch;
+
+    padding: 10px 10px;
+    /* border: 1px solid red; */
+}
+
+#form-edit-client input {
+    height: 51px;
+
+    margin: 10px 5px;
+
+    font-family: Quicksand;
+    border-radius: 15px;
+    border: #F1F1F1;
+    color: black;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 9px 7px 15px -10px #878
+}
+
+#form-edit-client input::placeholder {
+    padding-left: 15px;
+}
+
+#form-edit-client input:focus {
+    padding-left: 15px;
+    border: 2px solid yellow;
+}
+
+#form-edit-client input:not(:focus) {
+    padding-left: 15px;
+}
+
+#form-edit-client button {
     height: 62px;
     margin: 10px 5px;
     margin-top: 35px;

@@ -14,7 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -69,7 +70,7 @@
             </div>
 
 
-            <button id="add-client-button">
+            <button id="add-client-button" onclick="mostrarPagina('adicionar')">
                 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                     <g id="plus-solid-1">
                         <rect width="32" height="32" fill="#fd6a68" />
@@ -79,6 +80,7 @@
                     </g>
                 </svg>
             </button>
+
 
         </div>
 
@@ -93,18 +95,19 @@
 
             <div id="add-client">
                 <form id="form-add-client">
-                    <input type="text" required name="name" id="name" placeholder="Nome">
-                    <input type="text" required name="email" id="email" oninput="validaEmail(this)"
+                    <input type="text" required name="name" id="add_name" placeholder="Nome">
+                    <input type="text" required name="email" id="add_email" oninput="validaEmail(this)"
                         placeholder="E-mail">
-                    <input type="text" required name="cep" id="cep" oninput="autopreencherEndereco(this)"
-                        placeholder="CEP" maxlength="9">
-                    <input type="text" required name="city" id="city" placeholder="Cidade">
-                    <input type="text" required name="address" id="address" placeholder="Endereço">
-                    <input type="text" required name="number" id="number" placeholder="Número">
-                    <input type="text" oninput="formatarTelefone(this)" required name="whatsapp" id="whatsapp"
-                        placeholder="Whatsapp" maxlength="15">
-                    <input type="text" required name="cpf" id="cpf" maxlength="11" oninput="formatarCPF(this)"
+                    <input type="text" required name="cpf" id="add_cpf" maxlength="11" oninput="formatarCPF(this)"
                         placeholder="CPF">
+                    <input type="text" name="cep" id="add_cep" oninput="autopreencherEndereco(this)" placeholder="CEP"
+                        maxlength="9">
+                    <input type="text" required name="address" id="add_address" placeholder="Endereço">
+                    <input type="text" required name="city" id="add_city" placeholder="Cidade">
+                    <input type="text" required name="state" id="add_state" placeholder="Estado">
+                    <input type="text" required name="number" id="add_number" placeholder="Número">
+                    <input type="text" oninput="formatarTelefone(this)" required name="whatsapp" id="add_whatsapp"
+                        placeholder="Whatsapp" maxlength="15">
                     <button type="submit">Salvar</button>
                 </form>
             </div>
@@ -114,11 +117,47 @@
             </div>
         </div>
 
-        <div id="button-panel">
+        <!-- Página de edição de cliente  -->
+        <div id="edit-client-page">
+            <div id="edit-client-header">
+                <button id="back-button" onclick="mostrarPagina('clientes')">
+                    <img src="./assets/img/chevron-left-solid 1.png">
+                </button>
+                <h3>Editar Cliente</h3>
+            </div>
+
+
+            <div id="edit-client">
+                <form id="form-edit-client">
+                    <input type="hidden" id="edit_id" name="id" value="">
+                    <input type="text" required name="name" id="edit_name" placeholder="Nome">
+                    <input type="text" required name="email" id="edit_email" oninput="validaEmail(this)"
+                        placeholder="E-mail">
+                    <input type="text" required name="cpf" id="edit_cpf" maxlength="11" oninput="formatarCPF(this)"
+                        placeholder="CPF">
+                    <input type="text" name="cep" id="edit_cep" oninput="autopreencherEndereco(this)" placeholder="CEP"
+                        maxlength="9">
+                    <input type="text" required name="address" id="edit_address" placeholder="Endereço">
+                    <input type="text" required name="city" id="edit_city" placeholder="Cidade">
+                    <input type="text" required name="number" id="edit_number" placeholder="Número">
+                    <input type="text" oninput="formatarTelefone(this)" required name="whatsapp" id="edit_whatsapp"
+                        placeholder="Whatsapp" maxlength="19">
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+
+            <div class="warning">
+
+            </div>
+        </div>
+
+
+        <!-- <div id="button-panel">
             <button onclick="mostrarPagina('login')">Login</button>
             <button onclick="mostrarPagina('clientes')">Clientes</button>
             <button onclick="mostrarPagina('adicionar')">Adicionar</button>
-        </div>
+            <button onclick="mostrarPagina('editar')">editar</button>
+        </div> -->
 
     </div>
     <script type="text/javascript" src="assets/js/form-validation.js"></script>
@@ -126,6 +165,8 @@
     <script type="text/javascript" src="assets/js/script.js"></script>
     <script type="text/javascript" src="assets/js/login.js"></script>
     <script type="text/javascript" src="assets/js/client-list.js"></script>
+    <script type="text/javascript" src="assets/js/client-register.js"></script>
+    <script type="text/javascript" src="assets/js/search.js"></script>
 </body>
 
 </html>

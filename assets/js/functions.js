@@ -6,6 +6,7 @@
 function autopreencherEndereco(cepInput) {
 
     let cep = cepInput.value
+    let cepData = {}
 
     if (cep.length === 9) {
 
@@ -20,9 +21,10 @@ function autopreencherEndereco(cepInput) {
             .then((data) => {
                 if (!data.error) {
                     // estado.value = data.uf;
-                    cidade.value = `${data.localidade} - ${data.uf}`;
-                    endereco.value = `${data.logradouro} - ${data.bairro}`;
-                    wpp.value = `+55 ${data.ddd}`;
+                    cepData.cidade = `${data.localidade} - ${data.uf}`;
+                    cepData.endereco = `${data.logradouro} - ${data.bairro}`;
+                    // data.wpp = `${data.ddd}`;
+                    console.log(cepData)
                 }
             })
             .catch((error) => {
@@ -41,11 +43,15 @@ function mostrarPagina(pagina) {
         document.getElementById('login-page').style.display = 'flex';
         document.getElementById('clients-page').style.display = 'none';
         document.getElementById('add-client-page').style.display = 'none';
-    } else if (pagina === 'clientes') { 
+        document.getElementById('edit-client-page').style.display = 'none';
+    } else if (pagina === 'clientes') {
+        // limparListagemClientes()
         // Exibe a página de listagem de clientes
         document.getElementById('login-page').style.display = 'none';
         document.getElementById('clients-page').style.display = 'flex';
         document.getElementById('add-client-page').style.display = 'none';
+        document.getElementById('edit-client-page').style.display = 'none';
+        // const listagem = document.getElementById('')
         listarClientes()
     }
     else if (pagina === 'adicionar') {
@@ -53,11 +59,29 @@ function mostrarPagina(pagina) {
         document.getElementById('login-page').style.display = 'none';
         document.getElementById('clients-page').style.display = 'none';
         document.getElementById('add-client-page').style.display = 'flex';
+        document.getElementById('edit-client-page').style.display = 'none';
     } else if (pagina === 'editar') {
         // Exibe a página de editar cliente
         document.getElementById('login-page').style.display = 'none';
         document.getElementById('clients-page').style.display = 'none';
         document.getElementById('add-client-page').style.display = 'none';
         document.getElementById('edit-client-page').style.display = 'flex';
+    }
+}
+
+function extrairCidadeEstado(cidadeEstado) {
+    // console.log(cidadeEstado)
+    const regex = /(.*?) - (.*)/;
+    const match = cidadeEstado.match(regex);
+    if (match) {
+        return [match[1], match[2]]; // Retorna um array com a cidade e o estado
+    }
+    return [null, null]; // Retorna um array com valores nulos se não encontrar a cidade e o estado
+}
+
+function limparListagemClientes() {
+    const clientItens = document.getElementById('client-itens');
+    while (clientItens.firstChild) {
+        clientItens.removeChild(clientItens.firstChild);
     }
 }
