@@ -4,7 +4,6 @@ const loginForm = document.getElementById('login-form')
 
 let authToken = '';
 
-
 function login(credentials) {
 
     try {
